@@ -1,0 +1,77 @@
+@import "../../index.scss";
+
+.details-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $baby-blue;
+  display: flex;
+  place-content: center;
+  .details-box {
+    width: 50%;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    min-height: 300px;
+    box-shadow: 8px 8px 38px -24px rgba(66, 68, 90, 1);
+
+    .details-box__back {
+      display: flex;
+      align-self: flex-start;
+      margin-left: 10px;
+      align-items: center;
+      transition: all 0.1s ease-in-out;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      &:hover {
+        color: $dark-blue;
+      }
+      svg {
+        font-size: 20px;
+        transform: translateY(-1px);
+      }
+    }
+    img {
+      margin-top: 20px;
+      border-radius: 10px;
+      height: 50%;
+      width: auto;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      width: 60%;
+      word-wrap: break-word;
+    }
+    .votes-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      h3 {
+        font-size: 25px;
+        margin: 0px 15px;
+      }
+      svg {
+        font-size: 20px;
+        transition: 0.2s ease-in-out all;
+        cursor: pointer;
+        &:first-of-type {
+          &:hover {
+            color: $red;
+          }
+        }
+        &:last-of-type {
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
